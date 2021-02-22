@@ -33,6 +33,10 @@ contract Math{
     return x;
     }
 
+    function factorCal(uint n, uint k) public returns(uint){
+        return fac(n)/(fac(k)*fac(n-k));
+    }
+
     /*
     Idea: recursiv, add the two numbers above
     Assumption: max pos <= max row

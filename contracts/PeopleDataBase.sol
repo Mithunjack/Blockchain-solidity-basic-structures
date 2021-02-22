@@ -29,4 +29,27 @@ contract PeopleDatabase {
     function incrementCount() internal {
         peopleCount += 1;
     }
+
+    function priceMoney(uint position) public view returns(float){
+
+        float organizer = money - money *  .1;
+        float givenAmount = money - organizer;
+        
+        float first = (givenAmount - givenAmount *  .5) ;
+        float second = givenAmount - givenAmount *  .3;
+        float third = givenAmount - givenAmount *  .2;
+        
+        float result;
+
+        if(position == 1 ){
+            result = money + first;
+        }else if(position == 2 ){
+            result = money + second;
+        }else if(position == 3 ){
+            result = money + third;
+        }
+
+        return result;
+    }
+
 }

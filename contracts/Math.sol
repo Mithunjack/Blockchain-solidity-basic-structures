@@ -18,6 +18,12 @@ contract Math{
         }
     }
 
+    // Final Question 
+    function calculateTriangle(uint n) public returns(uint){
+        x = (n*n + n);
+        return x/2;
+    }
+
      /*
     Factorial: 5! = 1 * 2 * 3 * 4 * 5 = 120
     Definition: n! = 1, if n = 0
@@ -33,6 +39,7 @@ contract Math{
     return x;
     }
 
+    // Final Question
     function factorCal(uint n, uint k) public returns(uint){
         return fac(n)/(fac(k)*fac(n-k));
     }

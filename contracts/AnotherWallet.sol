@@ -12,12 +12,12 @@ contract AnotherWallet {
         minter = msg.sender; // msg.sender will be the person who currently connecting with the contract.
     }
 
-    function buy(address receiver, uint amount) public payable{ //payable modifier need to use in any transection
+    function buy(address receiver, uint amount) public payable{ //payable modifier needed to use in any transection
         if(msg.sender != minter) return;
         balance[receiver] += amount;
     }
 
-    function sent(address receiver, uint amount) public payable{ //payable modifier need to use in any transection
+    function sent(address receiver, uint amount) public payable{ //payable modifier needed to use in any transection
         if(balance[msg.sender] < amount) return;
         balance[msg.sender] -= amount;
         balance[receiver] += amount;

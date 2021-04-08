@@ -30,7 +30,12 @@ contract PeopleDatabase {
         peopleCount += 1;
     }
 
-    function priceMoney(uint position) public view returns(float){
+
+    //View functions ensure that they will not modify the state. A function can be declared as view. 
+    //The following statements if present in the function are considered modifying the state and compiler will throw warning in such 
+    //cases.
+
+    function priceMoney(uint position) public returns(float){
 
         float organizer = money - money *  .1;
         float givenAmount = money - organizer;
